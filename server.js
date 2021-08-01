@@ -11,10 +11,6 @@ app.use(express.json({ extended: false }));
 
 const PORT = process.env.PORT || 8000;
 
-app.get('/', (req,res) => {
-    res.send('HOME PAGE');
-});
-
 //define routes
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/posts', require('./routes/api/posts'));
